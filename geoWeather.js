@@ -2,7 +2,10 @@ class WeatherWidjet {
   constructor(latitude, longitude){
     this._latitude = latitude;
     this._longitude = longitude;
-    this._apiKey = 'c0bd5492cadf7707bfc4a4d4d711b66d';
+    this._apiKey = 'c0bd5492cadf7707bfc4a4d4d711b66d'; /*
+  Внимание: этот ключ используется только в учебных целях.
+  Для продакшн-проектов — вынесите ключ в .env файл или на сервер.
+*/
     this.apiQuery = `https://api.openweathermap.org/data/2.5/weather?lat=${ this._latitude}&lon=${this._longitude}&appid=${this._apiKey}&units=metric&lang=ru`;
    console.log(this.apiQuery);
     this.widgetHtml = `
